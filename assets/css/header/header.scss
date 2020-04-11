@@ -185,6 +185,9 @@
   left: 56%;
   width: 355px;
   height: 220px;
+  animation-name: animate-gear;
+  animation-duration: 52s;
+  animation-iteration-count: infinite;
 }
  @keyframes navLinkFade {
     from{

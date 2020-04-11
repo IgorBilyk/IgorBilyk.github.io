@@ -17,3 +17,34 @@
 main{
     width: 100%;
 }
+.portfolio-page-block{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.single-portfolio{
+    width: 30%;
+    height: 100%;
+}
+.single-portfolio:hover{
+    opacity: .7;
+    cursor: pointer;
+}
+.portfolio-block{
+    position: relative;
+    width: 50%;
+    height: 400px;
+    margin: 5% auto;
+    overflow: hidden;
+    background: url('../../img/cube-1963036_640.jpg')center top no-repeat;
+    background-size: cover;
+    transition: 1s ease;
+    -webkit-transition: 1s ease;
+    -moz-transition: 1s ease;
+    -ms-transition: 1s ease;
+    -o-transition: 1s ease;
+  }
+
+ .down{
+     margin: 5% 0 10% 0;
+ }

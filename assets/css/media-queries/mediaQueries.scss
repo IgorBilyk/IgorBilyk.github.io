@@ -52,6 +52,10 @@
    }
    .burger{
      display: block;
+     position: fixed;
+     top: 7%;
+     right: 10%;
+     height: 40px;
    }
    .item{
      opacity: 0;
