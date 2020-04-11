@@ -1,0 +1,42 @@
+.background-down {
+  display: block;
+  height: 10vh;
+  width: 100%;
+}
+
+.block1 {
+  position: absolute;
+  top: 30%;
+  left: 7%;
+  -webkit-animation-name: animate-blocks;
+          animation-name: animate-blocks;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.block2 {
+  position: absolute;
+  top: 35%;
+  left: 12%;
+  -webkit-animation-name: animate-blocks;
+          animation-name: animate-blocks;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.block3 {
+  position: absolute;
+  top: 40%;
+  left: 17%;
+  -webkit-animation-name: animate-blocks;
+          animation-name: animate-blocks;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+/*# sourceMappingURL=svg.css.map */

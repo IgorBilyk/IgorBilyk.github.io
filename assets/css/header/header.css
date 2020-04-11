@@ -1,0 +1,233 @@
+.animate-section {
+  max-height: 60vh;
+}
+
+.header {
+  width: 100%;
+  background: transparent;
+}
+
+.header-wrapper {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+}
+
+.header-wrapper h1 {
+  color: #fff;
+  font-size: 2.1rem;
+  text-transform: uppercase;
+  letter-spacing: .3rem;
+  margin: 15px 0;
+}
+
+.logo-text {
+  color: #fff;
+}
+
+.navbar {
+  position: fixed;
+  z-index: 888;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10px 0;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+
+.list-items {
+  width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+  z-index: 999 !important;
+}
+
+.item {
+  list-style: none;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+
+.item a {
+  position: relative;
+  text-decoration: none;
+  color: #fff;
+  font-weight: 500;
+  transition: .5s ease;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -ms-transition: .5s ease;
+  -o-transition: .5s ease;
+}
+
+.item a:hover {
+  color: #FE8264;
+}
+
+.item a:hover:before {
+  width: 30px;
+}
+
+.item a:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: -2px;
+  width: 0;
+  border-bottom: 2px solid #FE8264;
+  transition: .5s ease;
+  -webkit-transition: .5s ease;
+  -moz-transition: .5s ease;
+  -ms-transition: .5s ease;
+  -o-transition: .5s ease;
+}
+
+.burger {
+  width: 30px;
+  height: 100%;
+  margin: 0 5px 0 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: none;
+  cursor: pointer;
+}
+
+.burger div {
+  width: 100%;
+  height: 2px;
+  margin: 7px 0;
+  background: #fff;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+
+.line1 {
+  margin: 7px 0;
+}
+
+.line2 {
+  margin: 7px 0;
+}
+
+.line3 {
+  margin: 7px 0;
+}
+
+.toggle .line1 {
+  background: #941F52;
+  transform: rotate(-45deg) translate(-6px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+  -moz-transform: rotate(-45deg) translate(-6px, 6px);
+  -ms-transform: rotate(-45deg) translate(-6px, 6px);
+  -o-transform: rotate(-45deg) translate(-6px, 6px);
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+
+.toggle .line2 {
+  opacity: 0;
+}
+
+.toggle .line3 {
+  background: #941F52;
+  transform: rotate(45deg) translate(-7px, -6px);
+  -webkit-transform: rotate(45deg) translate(-7px, -6px);
+  -moz-transform: rotate(45deg) translate(-7px, -6px);
+  -ms-transform: rotate(45deg) translate(-7px, -6px);
+  -o-transform: rotate(45deg) translate(-7px, -6px);
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+
+.wrapper {
+  width: 80%;
+}
+
+.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #3D017A;
+  height: 15vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+
+.nav-active {
+  width: 80% !important;
+}
+
+.background-image {
+  position: absolute;
+  top: 31%;
+  left: 46%;
+  width: 355px;
+  height: 220px;
+}
+
+.gear {
+  position: absolute;
+  top: 41%;
+  left: 56%;
+  width: 355px;
+  height: 220px;
+}
+
+@-webkit-keyframes navLinkFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes navLinkFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=header.css.map */

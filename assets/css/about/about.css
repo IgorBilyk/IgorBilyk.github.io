@@ -1,0 +1,54 @@
+.spotAbout {
+  position: absolute;
+  width: 330px;
+  height: 330px;
+  -webkit-animation-name: animate-spots;
+          animation-name: animate-spots;
+  -webkit-animation-duration: 8s;
+          animation-duration: 8s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.image1 {
+  top: 0%;
+  left: 10%;
+}
+
+.image2 {
+  top: 20%;
+  left: 80%;
+}
+
+.profile-image {
+  width: 400px;
+  height: 400px;
+}
+
+.about-section {
+  text-align: center;
+  position: relative;
+}
+
+.about-wrapper {
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  margin: 90px 0;
+  color: #151948;
+  font-size: 45px;
+  letter-spacing: .3rem;
+}
+
+.about-block-left {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.about-block-left p {
+  font-size: 20px;
+  color: #5e629c;
+  margin: 0 0 40px 0;
+}
+/*# sourceMappingURL=about.css.map */

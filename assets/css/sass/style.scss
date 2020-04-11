@@ -1,0 +1,77 @@
+@import "../header/header";
+@import "../about/about";
+@import "../portfolio/portfolio";
+@import "../media-queries/mediaQueries";
+@import "../animation/animation";
+@import "../svg/svg";
+@import "../variables/variables";
+@import "../footer/footer";
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+    font-family: 'Reader Pro Regular', Helvetica, Arial, sans-serif !important;
+  }
+ 
+  .downloadIcon{
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+  }
+  .download-block p{
+    position: absolute;
+    top: 70px;
+    left: 65px;
+    color: #8840DE;
+    letter-spacing: 1px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+    
+}
+  .download-block:hover p{
+    cursor: pointer;
+    left: -18px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+
+  }
+ 
+ 
+  .background{
+    height: 130vh;
+    width: 100%;
+    background:  url('../../img/Background.png') left top /cover no-repeat; 
+    background-attachment: fixed;
+  
+  }
+  .contact-section{
+    display: flex;
+    justify-content: center;    
+  }
+  @media screen and (max-width: 1050px){
+    .image2{
+      width: 150px;
+      height: 150px;
+    }
+    .image2{
+      top: 40%;
+      left: 78%;
+      width: 150px;
+      height: 150px;
+  }
+   
+   }

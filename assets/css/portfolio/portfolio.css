@@ -1,0 +1,99 @@
+.portfolio-section {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background: black;
+  padding: 3% 0;
+}
+
+.portfolio-section h2 {
+  color: #fff;
+  padding: 1% 0 1% 0;
+  text-transform: uppercase;
+  letter-spacing: .2rem;
+}
+
+.portfolio-section h2:hover {
+  cursor: pointer;
+}
+
+.portfolio-block {
+  position: relative;
+  width: 50%;
+  height: 400px;
+  margin: 5% auto;
+  overflow: hidden;
+  background: url("../../img/cube-1963036_640.jpg") center top no-repeat;
+  background-size: cover;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: -100%;
+  background-color: #000;
+  opacity: 0;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+
+.overlay:before {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background: #6E627A;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  -webkit-transition: 2s ease;
+  -moz-transition: 2s ease;
+  -ms-transition: 2s ease;
+  -o-transition: 2s ease;
+}
+
+.portfolio-block:hover > .overlay,
+.portfolio-block:hover > .overlay:before {
+  opacity: .6;
+  top: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.portfolio-block:hover.portfolio-block a {
+  z-index: 100 !important;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.portfolio-block a {
+  z-index: 100 !important;
+  color: #fff;
+  text-transform: uppercase;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  padding: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: 1s ease;
+  -webkit-transition: 1s ease;
+  -moz-transition: 1s ease;
+  -ms-transition: 1s ease;
+  -o-transition: 1s ease;
+}
+/*# sourceMappingURL=portfolio.css.map */
