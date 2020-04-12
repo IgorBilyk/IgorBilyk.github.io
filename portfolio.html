@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" type="image/png" href="assets/img/Favicon.png">
   <link rel="stylesheet" href="assets/css/sass/style.css">
   <link rel="stylesheet" href="assets/css/portfolio-page/portfolio.css">
   <title>Portfolio</title>
@@ -25,35 +26,173 @@
   </nav>
 </header>
 <main>
-  <section>
-    <div class="wrapper-portfolio">
-      <h2>Sites of</h2>
-      <div class="portfolio-page-block">
-        <div class="single-portfolio">
-          <img src="assets/img/CandyShop.png" alt="candy" width="100%" height="100%">
-        </div>
-        <div class="single-portfolio">
-          <img src="assets/img/LuxuryRestaurant.png" alt="candy" width="100%" height="100%">
-        </div>
-        <div class="single-portfolio">
-          <img src="assets/img/CandyShop.png" alt="candy" width="100%" height="100%">
+  <section class="filter-section">
+    <div class="wrapper-filter">
+      <ul class="nav filter-buttons">
+          <!-- <input type="text" name="search" placeholder="Search..." data-search> -->
+          <!-- Filter by referring to "data-category" of items with the value of "data-filter". -->
+          <li data-filter="all">All</li>
+          <li data-filter="1">Candy</li>
+          <li data-filter="2">Restaurant</li>
+          <li data-filter="3">Bussines</li>
+          <li data-filter="4">Restaurant</li>
+      </ul>
+    </div>  
+<!--   <ul class="nav">
+      Sort by the value of "data-sort" of items.
+      <strong>Sorting:</strong>
+      <li data-sortasc>Asc</li>
+      <li data-sortdesc>Desc</li>
+  </ul> -->
+  <!-- <div class="nav">
+      <strong>Search:</strong>
+      Search for item text with input value with "data-search" added.
+      <input type="text" name="search" placeholder="Search..." data-search>
+  </div> -->
+  <!-- <div class="wrapper">
+      <div class="filter">
+          <div class="filtr-item box-orange" data-category="2" data-sort="8363710">
+              New York
+          </div>
+          <div class="filtr-item box-green" data-category="1" data-sort="3833995">
+              Los Angeles
+          </div>
+          <div class="filtr-item box-purple" data-category="3" data-sort="2853114">
+              Chicago
+          </div>
+          <div class="filtr-item box-green" data-category="1" data-sort="2242193">
+              Houston
+          </div>
+          <div class="filtr-item box-purple" data-category="3" data-sort="1567924">
+              Phoenix
+          </div>
+          <div class="filtr-item box-purple" data-category="3" data-sort="1447395">
+              Philadelphia
+          </div>
+          <div class="filtr-item box-orange" data-category="2" data-sort="1351305">
+              San Antonio
+          </div>
+          <div class="filtr-item box-green" data-category="1" data-sort="1279910">
+              Dallas
+          </div>
+          <div class="filtr-item box-orange" data-category="2" data-sort="1279329">
+              San Diego
+          </div>
+          <div class="filtr-item box-green" data-category="1" data-sort="948279">
+              San Jose
+          </div>
+          <div class="filtr-item box-orange" data-category="4" data-sort="8363710">
+            luxury
         </div>
       </div>
-      <div class="portfolio-page-block down">
-        <div class="single-portfolio">
-          <img src="assets/img/CandyShop.png" alt="candy" width="100%" height="100%">
-        </div>
-        <div class="single-portfolio">
-          <img src="assets/img/CandyShop.png" alt="candy" width="100%" height="100%">
-        </div>
-        <div class="single-portfolio">
-          <img src="assets/img/CandyShop.png" alt="candy" width="100%" height="100%">
-        </div>
-      </div>
-
-    </div>
+  </div> -->
   </section>
+  <section>
+    <div class="container">
+    <!--   <div class="page-title">
+        <h1>Filterable Gallery <br/><small>Using Filterizr.js</small></h1>
+        <small class="author">By <a href="http://www.devaradise.com/id">Syakir Rahman</a></small>
+      </div> -->
   
+      <div class="port-gallery">
+      <!--   <div class="filterizr-control">
+          <ul class="filterizr-filter">
+             <li class="filtr-active" data-filter="all">All Categories</li>
+             <li data-filter="1">Web Design</li>
+             <li data-filter="2">Front-end Dev</li>
+             <li data-filter="4">Codeigniter</li>
+          </ul>
+          <ul class="filterizr-sorting">
+            <li>
+              <span>Sort by :</span>
+              <select data-sortOrder>
+                 <option value="title"> Title </option>
+              </select>
+            </li>
+             <li class="filtr-active" data-sortAsc>Asc</li>
+             <li data-sortDesc>Desc</li>
+             <li data-shuffle>Acak</li>
+          </ul>
+        </div> -->
+        <div class="filtr-container">
+  
+          <div class="filtr-item" data-category="1" data-title="128 Web - HTML Website Template">
+            <img src="assets/img/CandyShop.png" alt="128 Web Website Template" />
+            <div class="desc"><a href="CandyShoop/index.html" target="_blank" rel="noopener">Candy Shop</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="2" data-title="Website BLK Bekasi">
+            <img src="assets/img/LuxuryRestaurant.png" alt="Website BLK Bekasi" />
+            <div class="desc"><a href="Luxury Restaurant/index.html" target="_blank" rel="noopener nofollow">luxury Restaurant</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="2" data-title="Website Dishub Kota Bogor">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/dllaj-kotabogor-300x171.jpg" alt="128 Web Website Template" />
+            <div class="desc"><a href="#" target="_blank" rel="noopener nofollow">My Company</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="2" data-title="Insan Medika Landing Page">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/inmed-300x171.jpg" alt="Insan Medika Landing Page" />
+            <div class="desc"><a href="#" target="_blank">Portfolio Page</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="3" data-title="Kontes Desain Appkodes">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/psd-appkodes-300x171.jpg" alt="Kontes Desain Appkodes" />
+            <div class="desc"><a href="#" target="_blank">Company</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="2" data-title="Kalemag HTML Template">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/kalemag-300x171.jpg" alt="Kalemag HTML Template" />
+            <div class="desc"><a href="#" target="_blank">Kitchet</a></div>
+          </div>
+  
+          <!-- <div class="filtr-item" data-category="2" data-title="Dmw Dashboard Front-end">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/dmw-dashboard-300x171.jpg" alt="Dmw Dashboard Front-end" />
+            <div class="desc"><a href="#">Dmw Dashboard Front-end</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="1" data-title="Desain web Bello Perfetto">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/psd-belloperfetto-300x171.jpg" alt="Desain web Bello Perfetto" />
+            <div class="desc"><a href="#">Desain web Bello Perfetto</a></div>
+          </div>
+          
+          <div class="filtr-item" data-category="2" data-title="Wedding Wonderland Landing Page">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/wedding-wonderland-300x171.jpg" alt="Wedding Wonderland Landing Page" />
+            <div class="desc"><a href="#">Wedding Wonderland Landing Page</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="1" data-title="PSD Design Simpleshop">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/psd-simpleshop-300x171.jpg" alt="PSD Design Simpleshop" />
+            <div class="desc"><a href="#">PSD Design Simpleshop</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="2" data-title="Pesanlab Website Frontend">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/pesanlab-300x171.jpg" alt="Pesanlab Website Frontend" />
+            <div class="desc"><a href="#">Pesanlab Website Frontend</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="2" data-title="Panenid Website Landing Page">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/panenid-300x171.jpg" alt="Panenid Website Landing Page" />
+            <div class="desc"><a href="#">Panenid Website Landing Page</a></div>
+          </div>
+  
+          <div class="filtr-item" data-category="2" data-title="Dusty Creative Frontend Website">
+            <img src="https://www.devaradise.com/id/wp-content/uploads/sites/4/2018/07/dusty-creative-300x171.jpg" alt="Dusty Creative Frontend Website" />
+            <div class="desc"><a href="#">Dusty Creative Frontend Website</a></div>
+          </div> -->
+  
+        </div>
+  
+  
+      </div>
+    
+
+
+  </div>
+  </section>
+ 
+
+
 </main>
 <footer id="contacts">
     <div class="contact-section">
@@ -71,5 +210,32 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>      
 <script src="assets/js/main.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/filterizr/1.3.4/jquery.filterizr.min.js"></script>
+
+
+
+    <script>
+    $(function () {
+        $('.filter').filterizr();
+    });
+    $(document).ready(function() {
+
+$('.filterizr-filter li').click(function() {
+  $('.filterizr-filter li').removeClass('filtr-active');
+  $(this).addClass('filtr-active');
+});
+$('.filterizr-sorting li').click(function() {
+  $('.filterizr-sorting li').removeClass('filtr-active');
+  $(this).addClass('filtr-active');
+});
+
+var filterizd = $('.filtr-container').filterizr();
+
+filterizd.filterizr('sort', 'title', 'asc');
+
+});
+</script>
+
+
 </body>
 </html>

@@ -1,0 +1,63 @@
+@media screen and (max-width: 992px){
+
+.logo{
+  margin: 30px 35%;
+}
+.menu ul{
+	flex-direction: column;
+	margin: 40px 40px;
+
+}
+.menu ul li {
+ margin: 0 auto;
+ font-size: 35px;
+ padding: 20px 0;
+ border-bottom:  3px solid rgba(220,50,0,0.6);
+
+}
+.book{
+
+	margin: 20px auto;
+	height: 70px;
+	width: 100%;
+	font-size: 25px;
+}
+.order-img{
+height: 40px;
+
+}
+.phone-text{
+ font-size: 25px;
+}
+.phone-text span{
+ font-size: 20px;
+
+
+}
+.phone-digits{
+font-size: 37px;
+width: 100%;
+
+}
+.footer{
+margin-top:  1500px ;
+height: 200px;
+}
+.socials {
+margin: 0 auto;
+
+}
+.socials-item a{
+
+height: 70px;
+width: 70px;
+}
+.all-rigth{
+margin: 20px ;
+
+}
+.left-line{
+ display: none;
+
+}
+}

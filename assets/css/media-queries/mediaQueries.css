@@ -40,14 +40,14 @@
   }
   .list-items {
     width: 0%;
-    height: 75vh;
+    height: 80vh;
     position: absolute;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
     right: 0;
-    top: 15vh;
+    top: 20vh;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;

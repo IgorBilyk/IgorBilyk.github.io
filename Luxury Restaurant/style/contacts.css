@@ -1,0 +1,35 @@
+.map{
+	height: 400px;
+	background: grey;
+}
+.contacts{
+	
+}
+.footer{
+	display: none;
+
+}
+.social-links{
+	width: auto;
+}
+.socials{
+	margin-top: 10px;
+}
+ .socials li{
+	margin-bottom: 25px;
+}
+.phone-text{
+	font-size: 1.5rem;
+	letter-spacing: .2rem;
+	color: #333;
+}
+iframe{
+	width: 100%;
+	height: 100%;
+}
+@media screen and (max-width: 778px){
+	.footer{
+		display: none;
+	}
+	
+}

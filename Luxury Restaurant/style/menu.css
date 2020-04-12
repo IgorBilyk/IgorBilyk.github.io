@@ -1,0 +1,150 @@
+
+.item2{
+	border-bottom: 3px solid #FEA100;
+	
+}
+.header-dish{
+	color: #333;
+	letter-spacing: 0.3rem;
+	font-size: 3rem;
+}
+
+.food-menu{
+	text-align: center;
+	box-shadow: 0 20px 90px rgba(0,0,0,0.15);	
+	margin-bottom: 130px;
+    margin-top: 30px;
+}
+.food-img-menu{
+ 	margin-bottom: 45px;
+
+}
+.food-title-menu{
+	font-size: 26px;
+	margin-bottom: 10px;	
+}
+.food-desc-menu{
+
+	font-size: 14px;
+	padding: 0 50px;
+	padding-bottom: 64px ; 
+}
+.food-del-menu{
+
+	text-transform: uppercase;
+	font-size: 13px;
+	color: #000;
+	font-weight: 700;
+	width: 78px;
+	text-align: left;
+	border-right: 1px solid #dbddde;
+	margin-top: 20px;
+
+}
+.food-del-menu span{
+ 
+	color: #fe4c8d;
+	text-transform: uppercase;
+	font-size: 13px;
+	font-weight: 700;
+
+} 
+.food-details-menu{
+
+	border-top: 1px solid #dbddde;
+	margin: 0 45px; 
+}
+.food-phone-menu{
+	font-size: 26px;
+	font-weight: 700;
+	font-family: 'Sintony', sans-serif;
+	color: #14141d;
+	margin: 20px ;
+}
+.food-price-menu{
+	font-size: 30px;
+	font-family: 'Playfair Display', serif;
+	font-weight: 700;
+	color: #fea100;
+    margin: 15px 0 ;
+ }
+ .food {
+ 	margin-bottom: 0px !important;
+ }
+ .food:hover{
+ 	cursor: pointer;
+ 	transition: 1s;
+	box-shadow: 10px 10px 10px 10px rgba(0,0,0,0.3);
+ 
+ }
+ .footer{
+ 	margin-top: 10%;
+ }
+ svg{
+ 	font-size: 2rem;
+ 	fill: orange;
+ }
+ @media screen and (max-width: 576px){
+	 p{
+		font-size: 1rem;
+		margin: 0;
+	}
+	.book {
+     margin: 0;
+     height: auto; 
+     width: 100%;
+     text-transform: uppercase;
+ }
+	.history-title{
+		font-size: 3rem;
+	}
+	.history h3{
+		font-size: 1.5rem;
+	}
+	.phone-digits span {
+		font-size: 2.9rem;
+	}
+	.cta{
+		width: 100%;
+		font-size: 2rem;
+		margin: 10px 0 0 0;
+
+	}
+	.food-images-item{
+		width: 100%;
+	}
+	.today{
+		font-size: 3rem;
+	}
+	.food-title-menu{
+		font-size: 2.4rem;
+	}
+	.food-desc-menu{
+		font-size: 1.4rem;
+		padding: 0;
+	}
+	.food-del-menu{
+	 width: 100%; 
+     border-right: none;
+     font-size: 1.5rem;
+	}
+	.food-del-menu span {
+		font-size: 1.5rem;
+	}
+	.food-details-menu{
+		flex-direction: column;
+		
+}
+	.food-phone-menu{
+		margin: 0;
+		padding: 5px;
+	}
+	.food-price-menu{
+		margin: 0 0 17px !important;
+	}
+	.footer{
+		margin-top: 5%;
+	}
+
+
+}
