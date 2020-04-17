@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wether App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="wether-header">
+            <form>
+                <input type="text" class="search" id="input" maxlength="20" placeholder=" " required>
+                <!-- <label for="input">
+                    <span>Find your place</span>
+                </label> -->
+                <button class="btnGetWeather" id="btnGetWeather">Find</button>
+                <!-- <input type="submit" class="btnGetWeather" value="Find" id="btnGetWeather"> -->
+            </form>
+            
+        </div>
+        <div class="search-city">
+            <span id="span-result"></span>
+            <p id="result"></p>
+            <img id="search-icon" src="" alt="">
+        </div>
+        <div class="current-city">
+            <h1>Timezone : Lisbon</h1>
+            <p id="out"></p>
+            <img id="icon" src="" alt="icon">
+        </div>
+
+    </div>
+    <script>
+        function activatePlacesSearch() {
+            let input = document.querySelector('#input');
+            let autocomplete = new google.maps.places.Autocomplete(input);
+        }
+    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcvJYeLM7p_7hxt2XxTlc3fWRCeZJ9y8&libraries=places&callback=activatePlacesSearch"></script>
+    <script src="app.js"></script>
+</body>
+</html>
