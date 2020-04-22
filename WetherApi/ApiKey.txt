@@ -1,2 +1,3 @@
 OpenWeatherMap ApiKey = 1192ae3d1ebdb8edcae3bdfb00ac72b6
 Google query Api = AIzaSyAbcvJYeLM7p_7hxt2XxTlc3fWRCeZJ9y8
+News Api key = 46154422b4d645079df3846f1188a586
