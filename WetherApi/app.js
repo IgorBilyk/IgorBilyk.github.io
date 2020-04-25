@@ -62,7 +62,11 @@ getCurrentCity = () => {
         let result = date.slice(10, 16);
         let result2 = parseInt(date.slice(8, 10));
 
-        /* console.log(data.list[0]); */
+        for(var i = 3; i < 10; i+= 4){
+            console.log(data.list[i].main.temp, result2 + i)
+            
+        }
+       /*  console.log(data.list[0]); */
          let iconcode = data.list[0].weather[0].icon;
         let iconUrl = "http://openweathermap.org/img/w/" + iconcode + ".png";/*
         let weatherDesc = data.weather[0].main;
@@ -74,14 +78,18 @@ getCurrentCity = () => {
        /*  dayDate.innerHTML = days[new Date().getDay()] + " " + result2; */
         /* dayHour.innerHTML = result; */
      /*    dayTeampreture.innerHTML = `${(Math.round(data.list[0].main.temp))} C<sup>o</sup> ` */
-        console.log(data.list);
+        new Date().getDay()
+        new Date().getDay()
+        new Date().getDay()
 
-
+        fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=1192ae3d1ebdb8edcae3bdfb00ac72b6`)
+    .then(res => res.json())
+    .then(data =>{})
         insertCityWeather((Math.round(data.list[0].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() - 1]+ " " + (result2 ), `http://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png` );
         insertCityWeather((Math.round(data.list[8].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay()    ] + " " + (result2 + 1), `http://openweathermap.org/img/w/${data.list[8].weather[0].icon}.png` );
-        insertCityWeather((Math.round(data.list[15].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 1] + " " + (result2 + 2),`http://openweathermap.org/img/w/${iconcode}.png` );
-        insertCityWeather((Math.round(data.list[22].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 2] + " " + (result2 + 3),`http://openweathermap.org/img/w/${iconcode}.png` );
-        insertCityWeather((Math.round(data.list[34].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + -4] + " " + (result2 + 4),`http://openweathermap.org/img/w/${iconcode}.png` );
+        insertCityWeather((Math.round(data.list[17].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 1] + " " + (result2 + 2),`http://openweathermap.org/img/w/${iconcode}.png` );
+        insertCityWeather((Math.round(data.list[28].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 2] + " " + (result2 + 3),`http://openweathermap.org/img/w/${iconcode}.png` );
+        insertCityWeather((Math.round(data.list[36].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + -4] + " " + (result2 + 4),`http://openweathermap.org/img/w/${iconcode}.png` );
   
     })
      .catch(error =>{
