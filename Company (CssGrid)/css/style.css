@@ -303,6 +303,33 @@ i{
     margin: 0 20px 0 0;
     background: lightcoral;
     height: 215px;
+    transition: .5s ease;
+    -webkit-transition: .5s ease;
+    -moz-transition: .5s ease;
+    -ms-transition: .5s ease;
+    -o-transition: .5s ease;
+}
+
+.block:hover{
+    cursor: pointer;
+    opacity: .7;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+}
+.block:nth-of-type(1){
+    background: url('../img/man-working-on-laptop-while-woman-takes-notes-3153199.jpg');
+}
+.block:nth-of-type(2){
+    background: url('../img/men-s-wearing-black-suit-jacket-and-pants-937481.jpg');
+}
+.block:nth-of-type(3){
+    background: url('../img/photo-of-woman-using-her-laptop-935756.jpg');
+}
+.block:nth-of-type(4){
+    background: url('../img/woman-sitting-on-gray-chair-1543895.jpg');
 }
 .email{
     text-align: center;
@@ -383,6 +410,7 @@ i{
     margin: 60px 0 0 0;
 }
 .left-form input{
+    outline: none;
     width: 340px;
     height: 70px;
     padding: 0 0 0 45px;
@@ -398,6 +426,7 @@ i{
     margin: 0 50px 0 0;
 }
 .left-form textarea{
+    outline: none;
     border: none;
     width: 730px;
     max-width: 730px;
