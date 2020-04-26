@@ -9,6 +9,11 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar">
+        <ul class="articles">
+            
+        </ul>
+    </nav>
     <div class="wrapper">
         <div class="wether-header">
             <form>
@@ -16,7 +21,7 @@
                 <!-- <label for="input">
                     <span>Find your place</span>
                 </label> -->
-                <button class="btnGetWeather" id="btnGetWeather">Find</button>
+                <button class="button" id="btnGetWeather">Find</button>
                 <!-- <input type="submit" class="btnGetWeather" value="Find" id="btnGetWeather"> -->
             </form>
             
@@ -28,9 +33,10 @@
         </div>
         <div class="search-city">
         
-        </div>
+         </div>
         <div class="current-city">
-            <h1>Timezone : Lisbon</h1>
+            <button class="button second" id="getFiveWeather">See For more 5 days</button>
+            <h1></h1>
             <p id="out"></p>
             <!-- <img id="icon" src="" alt="icon"> -->
         </div>
@@ -46,14 +52,13 @@
         </div>
 
 
-   <!--  <script>
+    <script>
         function activatePlacesSearch() {
-
             let input = document.querySelector('#input');
             let autocomplete = new google.maps.places.Autocomplete(input);
         }
-    </script> -->
-    <!-- <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcvJYeLM7p_7hxt2XxTlc3fWRCeZJ9y8&libraries=places&callback=activatePlacesSearch"></script> -->
+    </script>
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAbcvJYeLM7p_7hxt2XxTlc3fWRCeZJ9y8&libraries=places&callback=activatePlacesSearch"></script>
     <script src="app.js"></script>
     <!-- <script src="cities.js"></script> -->
 </body>

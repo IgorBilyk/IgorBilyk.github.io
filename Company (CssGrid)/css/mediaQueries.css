@@ -30,4 +30,10 @@
     right: 10px;
     z-index: 100;
     }
+    section{
+        padding: 0;
+    }
+    .header-section{
+        grid-template-areas: "block-left";
+    }
   }

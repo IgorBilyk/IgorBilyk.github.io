@@ -9,6 +9,14 @@ body{
 h1{
     margin: 0;
 }
+.navbar{
+  height: 20%;
+  background: lightblue;
+}
+.articles{
+  height: 100%;
+  width: 100%;
+}
 .wrapper{
   display: flex;
   justify-content: center;
@@ -29,6 +37,7 @@ background: linear-gradient(325deg, rgba(2,0,36,1) 0%, rgba(166,240,228,0.154796
     text-align: center;
     margin: 0 auto;
 }
+.current-city button{}
 p{
   display: inline-block;
 }
@@ -53,7 +62,7 @@ p{
 
 }
 
-.btnGetWeather{
+.button{
     border: none;
     padding: 10px;  
     width: 20%;
@@ -76,7 +85,7 @@ p{
 }
   .search-city{
     text-align: center;
-    height: 40vh;
+    min-height: 40vh;
     width: 50%;
     margin: 0 auto;
   /*   background-image: url('img/sky-sunny.jpg'); */
@@ -93,15 +102,20 @@ p{
     transition: all .5s ease;
     border-bottom: 2px blue solid; 
   }
-  .btnGetWeather{
+  .button{
     cursor: pointer;
     padding: 7px 15px;
-    font-size: 16px;
+    font-size: 19px;
     text-transform: uppercase;
     color: #fff;
     border: none;
     background: #38515F;
     border-radius: 5%;
+  }
+  .second{
+    width: 30%;
+    padding: 20px 20px;
+    margin: 5% 0;
   }
  /*  label{
     width: 100%;

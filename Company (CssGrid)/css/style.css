@@ -87,15 +87,21 @@
  .header-section{
      display: grid;
      grid-template-columns: 1fr 1fr;
+     grid-template-rows: 1fr ;
+     grid-template-areas: "block-left block-right";
      grid-column-gap: 50px;
      background: #f6f2f2;
      
  }
  .block-left{
    text-align: left;
+   grid-area: block-left;
    /* margin: 110px 0 0 162px; */
 
 
+ }
+ .block-right{
+    grid-area: block-right;
  }
  .block-left h1{
     text-transform: uppercase;
@@ -206,11 +212,29 @@ i{
     -ms-transform: scale(2);
     -o-transform: scale(2);
 }
+
 .wrapper-filter{
     display: flex;
     justify-content: center;
     margin: 90px 0 65px 0 ;
 }
+.filtr-container{
+    position: static;
+    width: 80%;
+    display: flex;
+
+}
+.container{
+    width: 80%;
+}
+.filtr-item{
+    position: static;
+    width: 300px;
+    height: 300px;
+    border: 1px solid black;
+    background: lightcoral;
+}
+
 .filter-buttons{
     display: flex;
     justify-content: center;
@@ -227,11 +251,7 @@ i{
     color: #ff0000;
     cursor: pointer;
 }
-.filtr-container{
-    position: static;
-    width: 80%;
-    min-height: 200px !important;
-}
+
 .feature-section{
     display: grid;
     grid-template-columns: 1fr;
@@ -276,6 +296,12 @@ i{
     text-transform: uppercase;
     font-weight: 600;
     margin: 140px 0 40px 0;
+    letter-spacing: .1rem;
+}
+.team-item p {
+    margin: 0 0 50px 0;
+    letter-spacing: .1rem;
+    color: #737373;
 }
 .team-item hr{
     width: 130px;
@@ -287,16 +313,32 @@ i{
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr ;
 }
-.team-members p{
-    width: 630px;
+.team-members {
 
 }
+.team-members h4{
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #585858;;
+}
+.team-members p{
+    width: 630px;
+    color:#585858;
+    margin: 40px 0 40px 0;
+
+}
+pre{
+    font-style: italic;
+}
+
 .team-picture{
     grid-row: 1 / 3;
-   /*  margin: 0 0 0 162px; */
+    margin: 0 0 0 0;
 }
 .blocks{
     display: flex;
+    margin: 70px 0 0 0 ;
 }
 .block{
     width: 200px;
