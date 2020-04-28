@@ -50,18 +50,13 @@ window.addEventListener('load', ()=> {
         }
     
     }
-   
+   //Api call to News 
     getNews = () => {
         fetch(`https://newsapi.org/v2/top-headlines?category=general&pageSize=5&country=pt&apiKey=${apiNewsKey}`)
         .then(res => res.json())
         .then(article =>{
             let title = article.articles[1].title
-            /* console.log(article.articles[1]);
-            let li = document.createElement('li');
-            li.innerText = `${title}`
-            articles.appendChild(li); */
-            
-               /*  console.log(article.articles) */
+            //Loping through all articles titles
             for(let i = 0; i < article.articles.length; i++){
                 
                 let li = document.createElement('li');

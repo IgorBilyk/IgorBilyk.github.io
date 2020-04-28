@@ -563,3 +563,15 @@ footer{
     cursor: pointer;
     opacity: .6;
 }
+.wrapper-images{
+    width: 50%;
+    height: 40vh;
+    margin: 0 auto;
+    border: 1px solid black;
+    display: flex;
+}
+.wrapper-images div{
+    width: 30%;
+    height: 25%;
+    background: lightblue;
+}
