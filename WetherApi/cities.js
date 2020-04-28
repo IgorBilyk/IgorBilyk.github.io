@@ -387,4 +387,235 @@ getCurrentCity = () => {
         })
       
     })
+    //Multiple Api Calls 
+
+    let weather = fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}`)
+    let news = (`https://newsapi.org/v2/top-headlines?category=general&pageSize=5&country=pt&apiKey=${apiNewsKey}`)
+    Promise.all([weather, news])
+    .then( files => {
+        files.forEach(file => {
+            process( file.json())
+        })
+    })
+    .catch( err => {
+
+    });
+    let process = (prom) => {
+        prom.then(data => {
+            console.log(123);
+
+        })
+    }
+
+    ///////////////
+    /* var x = document.getElementById("demo");
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
+    }
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude +
+      "<br>Longitude: " + position.coords.longitude;
+    }
+    getLocation();
+     */
+
+    navigator.geolocation.getCurrentPosition(function(position) {
+        
+        let long = position.coords.longitude;
+        let lat = position.coords.latitude;
+            //Call to get requested by customer city  
+    getCurrentCity = () => {
+        /* fetch('http://api.openweathermap.org/data/2.5/weather?q=Lisbon&units=metric&appid=1192ae3d1ebdb8edcae3bdfb00ac72b6')  */
+        fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=1192ae3d1ebdb8edcae3bdfb00ac72b6`)
+        .then(res => res.json())
+        .then(data =>{
+    /*         console.log(data.list[0]); */
+            
+            //Creating variable for date
+            let date = data.list[0].dt_txt;
+            let result = date.slice(10, 16);
+            let result2 = parseInt(date.slice(8, 10));
     
+            for(var i = 3; i < 10; i+= 4){
+                console.log(data.list[i].main.temp, result2 + i)
+                
+            }
+           /*  console.log(data.list[0]); */
+             let iconcode = data.list[0].weather[0].icon;
+            let iconUrl = "http://openweathermap.org/img/w/" + iconcode + ".png";/*
+            let weatherDesc = data.weather[0].main;
+            let weatherFullDesc = data.weather[0].description;*/
+    /*         iconForDay.setAttribute('src', iconUrl);  */
+            
+            //Insert data to HTML 
+           /*  weatherCityName.innerHTML = `Lisbon `; */
+           /*  dayDate.innerHTML = days[new Date().getDay()] + " " + result2; */
+            /* dayHour.innerHTML = result; */
+         /*    dayTeampreture.innerHTML = `${(Math.round(data.list[0].main.temp))} C<sup>o</sup> ` */
+            new Date().getDay()
+            new Date().getDay()
+            new Date().getDay()
+        
+            fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=1192ae3d1ebdb8edcae3bdfb00ac72b6`)
+        .then(res => res.json())
+        .then(data =>{})
+            insertCityWeather((Math.round(data.list[0].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 6] + " " + (result2 ), `http://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png` );
+            insertCityWeather((Math.round(data.list[8].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay()    ] + " " + (result2 + 1), `http://openweathermap.org/img/w/${data.list[8].weather[0].icon}.png` );
+            insertCityWeather((Math.round(data.list[17].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 1] + " " + (result2 + 2),`http://openweathermap.org/img/w/${iconcode}.png` );
+            insertCityWeather((Math.round(data.list[28].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 2] + " " + (result2 + 3),`http://openweathermap.org/img/w/${iconcode}.png` );
+            insertCityWeather((Math.round(data.list[36].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 3] + " " + (result2 + 4),`http://openweathermap.org/img/w/${iconcode}.png` );
+      
+        })
+         .catch(error =>{
+            
+                console.log(error);       
+            
+    
+      }
+         )}
+         getCurrentCity();
+    
+    
+      });
+    
+
+        //Test Button
+        test.addEventListener('click', () => {
+            
+            Promise.all([
+                fetch(`https://newsapi.org/v2/top-headlines?category=general&pageSize=5&country=pt&apiKey=${apiNewsKey}`),
+                fetch('https://jsonplaceholder.typicode.com/users')
+            ])
+                .then(function (responses) {
+                    // Get a JSON object from each of the responses
+                    return responses.map(function (response) {
+                        return response.json();
+                    });
+                }).then(function (data) {
+                    // Log the data to the console
+                    // You would do something with both sets of data here
+                    
+                     
+                     console.log(data[0][0]);
+                }).catch(function (error) {
+                    // if there's an error, log it
+                    console.log(error);
+                });
+        })
+    
+ 
+      getFiveWeather.addEventListener('click', () => {
+        /* navigator.geolocation.getCurrentPosition(function(position) { */
+        
+           /*  let long = position.coords.longitude;
+            let lat = position.coords.latitude; */
+                //Call to get requested by customer city  
+        getCurrentCity = () => {
+            
+            fetch(`http://api.openweathermap.org/data/2.5/forecast?city=Lisbon&units=metric&appid=1192ae3d1ebdb8edcae3bdfb00ac72b6`)
+            .then(res => res.json())
+            .then(data =>{
+                //Creating variable for date
+                let date = data.list[0].dt_txt;
+                let result = date.slice(10, 16);
+                let result2 = parseInt(date.slice(8, 10));
+        
+                for(var i = 3; i < 10; i+= 4){
+                    console.log(data.list[i].main.temp, result2 + i)
+                    
+                }
+               /*  console.log(data.list[0]); */
+                 let iconcode = data.list[0].weather[0].icon;
+                let iconUrl = "http://openweathermap.org/img/w/" + iconcode + ".png";/*
+                let weatherDesc = data.weather[0].main;
+                let weatherFullDesc = data.weather[0].description;*/
+        /*         iconForDay.setAttribute('src', iconUrl);  */
+                
+                //Insert data to HTML 
+               /*  weatherCityName.innerHTML = `Lisbon `; */
+               /*  dayDate.innerHTML = days[new Date().getDay()] + " " + result2; */
+                /* dayHour.innerHTML = result; */
+             /*    dayTeampreture.innerHTML = `${(Math.round(data.list[0].main.temp))} C<sup>o</sup> ` */
+            
+                console.log(data.list)
+                fetch(`http://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${long}&units=metric&appid=1192ae3d1ebdb8edcae3bdfb00ac72b6`)
+            .then(res => res.json())
+            .then(data =>{})
+            Console.log(data.list)
+                insertCityWeather((Math.round(data.list[0].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 2] + " " + (result2 ), `http://openweathermap.org/img/w/${data.list[0].weather[0].icon}.png` );
+                insertCityWeather((Math.round(data.list[8].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay()    ] + " " + (result2 + 1), `http://openweathermap.org/img/w/${data.list[8].weather[0].icon}.png` );
+                insertCityWeather((Math.round(data.list[17].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 1] + " " + (result2 + 2),`http://openweathermap.org/img/w/${iconcode}.png` );
+                insertCityWeather((Math.round(data.list[28].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + 2] + " " + (result2 + 3),`http://openweathermap.org/img/w/${iconcode}.png` );
+                insertCityWeather((Math.round(data.list[37].main.temp)) +  " C<sup>o</sup>",days[new Date().getDay() + -4] + " " + (result2 + 4),`http://openweathermap.org/img/w/${iconcode}.png` );
+          
+            })
+             .catch(error =>{
+                
+                    console.log(error);       
+                
+        
+          }
+             )}
+             getCurrentCity();
+        
+        
+          /* }); */
+        
+    })
+    
+    })
+    
+    // Insert data to HTML 
+    
+    
+    
+    insertCityWeather = (temp, date, img) =>{
+        let wrapperWeather = document.querySelector('.wrapper-weather');
+        let paragraph = document.createElement('p');
+        let paragraph2 = document.createElement('p');
+        let image = document.createElement('img');
+        let div = document.createElement('div');
+        div.className = 'weather-day';
+        wrapperWeather.appendChild(div);
+        image.setAttribute('src', img);         
+        paragraph.className = 'day-temperature';
+        paragraph.innerHTML = temp;
+        paragraph2.innerHTML = date;    
+        div.appendChild(paragraph2);
+        div.appendChild(paragraph); 
+        div.appendChild(image);
+    
+    }   
+    /* insertCityWeather(); */
+
+    
+ /*       .catch(error =>{
+            console.log("error");
+        }) 
+        //Fetch to News API
+
+    fetch(`https://newsapi.org/v2/top-headlines?category=general&pageSize=5&country=pt&apiKey=${apiNewsKey}`)
+        .then(res => res.json())
+        .then(article =>{
+            console.log(article.articles);
+            article.innerHTML = ` Hello `;
+        
+            
+           console.log( article.articles[0].title,+ '///'+ article.articles[1].title,+ '///'+ article.articles[2].title)
+          
+        })
+        .catch(error =>{
+            console.log("error");
+        }) 
+        //Fetch to News API
+
+
+
+       }
+    })
+         */
+      
