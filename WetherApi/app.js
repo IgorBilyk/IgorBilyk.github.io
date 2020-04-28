@@ -36,9 +36,21 @@ window.addEventListener('load', ()=> {
     ];
 
     arrow.addEventListener('click', () => {
-       articlesContainer.classList.toggle('active-articles');
-       arrow.classList.toggle('active-arrow');
-    })
+        articlesContainer.classList.toggle('active-articles');
+        arrow.classList.toggle('active-arrow');
+     })
+    hasContent = () => {
+        let li = document.querySelector('#li');
+        let hasContent = articles.contains(li);
+        
+        if(hasContent){
+            arrow.classList.remove('none');
+        }else{
+            arrow.classList.add('none'); 
+        }
+    
+    }
+   
     getNews = () => {
         fetch(`https://newsapi.org/v2/top-headlines?category=general&pageSize=5&country=pt&apiKey=${apiNewsKey}`)
         .then(res => res.json())
@@ -53,6 +65,7 @@ window.addEventListener('load', ()=> {
             for(let i = 0; i < article.articles.length; i++){
                 
                 let li = document.createElement('li');
+                li.setAttribute('id', 'li');
                 let link = document.createElement('a');
                 link.setAttribute('target', '_blank')
                 link.setAttribute('href', `${article.articles[i].url}`);
@@ -60,10 +73,11 @@ window.addEventListener('load', ()=> {
                 li.appendChild(link);
                 articles.appendChild(li);
             }
+            hasContent();
         
             
            console.log( article.articles[0].title,+ '///'+ article.articles[1].title,+ '///'+ article.articles[2].title)
-          
+           console.log(articles.contains(li));
         })
         .catch(error =>{
             console.log("error");
@@ -73,18 +87,28 @@ window.addEventListener('load', ()=> {
             
     
    
-   
+   //Get weather by city name
     btnGetWeather.addEventListener('click', (e) =>{
         city = document.querySelector('#input').value;
         if(!online){
+            e.preventDefault();
             alert('Please, check your internet connection!!!')
             return false;
         }else if(!city){
+            e.preventDefault();
             searchCity.innerHTML = "<p style= 'color:red'>Please, insert your city !!!</p>";
             searchCity.setAttribute("style", "background: none) ;");
             searchIcon.setAttribute('src',"")
             result.innerHTML = '';   
             return false;
+       }else if (city.length > 15){
+        e.preventDefault();
+        searchCity.innerHTML = "<p style= 'color:red'>Please, insert only city name !!!</p>";
+        searchCity.setAttribute("style", "background: none) ;");
+        searchIcon.setAttribute('src',"")
+        result.innerHTML = '';   
+        form.reset();
+    
        }else if(city){
     
         searchCity.innerHTML = " ";
@@ -113,13 +137,6 @@ window.addEventListener('load', ()=> {
         })
     }
 })
-
-
-
-
-
-
-
 
 
 

@@ -74,6 +74,9 @@ article ul li a:hover{
 .fa-arrow-circle-right:hover{
   cursor: pointer;
 }
+.none{
+  display: none !important;
+}
 .wrapper{
   display: flex;
   justify-content: center;
