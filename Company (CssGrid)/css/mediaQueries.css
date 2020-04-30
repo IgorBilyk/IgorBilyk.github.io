@@ -33,5 +33,29 @@
     section{
         padding: 0 !important;
     }
+    .header-section{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+        'block-left'  
+        'block-right';  
+        grid-column-gap: 50px;
+        background: #f6f2f2;
+        
+    }
+    .block-left{
+        text-align: center;
+        padding: 10% 0 0 0;
+        grid-area: block-left;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .block-right{
+        display: flex;
+        justify-content: center;
+    }
     
   }
