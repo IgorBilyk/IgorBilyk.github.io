@@ -10,11 +10,12 @@
     
    }
     .nav-list{
+    margin: 0;
     position: absolute;
     top: -100%;
     flex-direction: column;
     justify-content: space-around;
-    height: 100vh;
+    height: 70vh;
     width: 100%;
     background:rgba(0,0,0,.6);
     transition: 1s ease;
@@ -57,5 +58,113 @@
         display: flex;
         justify-content: center;
     }
+    .about-us{
+        display: grid;
+        grid-template-columns: 1fr ;
+        grid-template-rows:  1fr 1fr ;  
+    }
+    .about-left{
+        width: 100%;
+        padding: 105px 0 0 0;
+        text-align: center;
+    }
+    .about-left p{
+        width: 100%;
+    }
+    .block-left button {
+        width: 70%;
+        height: 50px;
+        padding: 20px 20px;
+        margin: 0 0 40px 0;
+    }
+    video {
+        margin: 0;
+        width: 90%;
+        height: 90%;
+    }
+    .about-left button {
+        margin: 0;
+    }
+    .about-right {
+        margin: 0;
+    }
+    .rigth-block{
+       text-align: center;
+       margin: 0 0 0 17%;
+    }
+    .team-header{
+        width: 100%;
+        padding: 0;
+        text-align: center;
+    }
+    .team-item hr{
+        display: none;
+    }
     
+    .team-item p{
+        width: 100%;
+        font-size: 18px;
+    }
+    .team-section-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .blocks {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;    
   }
+  .block{
+      width: 400px;
+      height: 400px;
+      background-repeat: no-repeat;
+      background-size: cover;
+  }
+  .getin-touch{
+      margin: 0;
+      text-align: center;
+  }
+  .form-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 0 110px 0;
+}
+.inputs{
+    width: 93%;
+}
+.left-form{
+    margin: 20px auto;
+    padding: 0;
+    align-items: center;
+}
+.right-form{
+    align-items: center;
+}
+.right-content {
+    text-align: center;
+    padding: 30px 0 0 0;
+    margin: 30px 0 0 100px;
+}
+footer{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+.copyright{
+    text-align: center;
+}
+.copyright p{
+    margin: 0;
+}
+.icons{
+    background: #313030;
+    justify-content: center;
+
+}
+.icons ul{
+    margin: 0;
+}
+}
