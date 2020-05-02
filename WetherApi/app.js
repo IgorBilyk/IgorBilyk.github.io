@@ -1,4 +1,5 @@
 window.addEventListener('load', ()=> {
+    //All variables 
     let form = document.querySelector('form');
     let result = document.querySelector('#result');
     let out = document.querySelector('#out');
@@ -24,7 +25,10 @@ window.addEventListener('load', ()=> {
     let article = document.querySelector('#article');
     let arrow = document.querySelector('.fa-arrow-circle-right');
     let articlesContainer = document.querySelector('article');
+    let history = document.querySelector('.history');
+    let cityStorage = [];
 
+    //Days array for displaying correct day name
     var days = [
         "Monday",
         "Tuesday",
@@ -34,11 +38,12 @@ window.addEventListener('load', ()=> {
         "Saturday",
         "Sunday",
     ];
-
+    //Function to Arrow (Explore articles section)
     arrow.addEventListener('click', () => {
         articlesContainer.classList.toggle('active-articles');
         arrow.classList.toggle('active-arrow');
      })
+     //Check if articles section already receives a data
     hasContent = () => {
         let li = document.querySelector('.li');
         let hasContent = articles.contains(li);
@@ -50,16 +55,16 @@ window.addEventListener('load', ()=> {
         }
     
     }
-   //Api call to News 
+   //Api call to News and fetching data
     getNews = () => {
         fetch(`https://newsapi.org/v2/top-headlines?category=general&pageSize=5&country=pt&apiKey=${apiNewsKey}`)
         .then(res => res.json())
         .then(article =>{
-            console.log(article.articles[1]);
+           /*  console.log(article.articles[1]); */
             let title = article.articles[1].title
-            //Loping through all articles titles
+            //Loping through all articles titles and inser title into HTML and also add pictures to articles
             for(let i = 0; i < article.articles.length; i++){
-                console.log(article.articles[i].url);
+                /* console.log(article.articles[i].url); */
                 let img = document.createElement('img');
                 let li = document.createElement('li');
                 li.setAttribute('class', 'li');
@@ -71,14 +76,16 @@ window.addEventListener('load', ()=> {
                 li.appendChild(link);
                 link.appendChild(img);
                 articles.appendChild(li);
-                /* articles.appendChild(img); */
+                
             }
+            //Call function to verify if articles section has content
             hasContent();
         
             
-           console.log( article.articles[0].title,+ '///'+ article.articles[1].title,+ '///'+ article.articles[2].title)
-           console.log(articles.contains(li));
+          /*  console.log( article.articles[0].title,+ '///'+ article.articles[1].title,+ '///'+ article.articles[2].title)
+           console.log(articles.contains(li)); */
         })
+        //Handle an error
         .catch(error =>{
             console.log("error");
         })
@@ -88,20 +95,23 @@ window.addEventListener('load', ()=> {
     
    
    //Get weather by city name
+   //Api call to openWeatherApi
     btnGetWeather.addEventListener('click', (e) =>{
         city = document.querySelector('#input').value;
+        //Check if client has internet connection
         if(!online){
             e.preventDefault();
             alert('Please, check your internet connection!!!')
             return false;
-        }else if(!city){
+        }else if(!city){   //Check if  client inserted input value
             e.preventDefault();
             searchCity.innerHTML = "<p style= 'color:red'>Please, insert your city !!!</p>";
             searchCity.setAttribute("style", "background: none) ;");
             searchIcon.setAttribute('src',"")
             result.innerHTML = '';   
             return false;
-       }else if (city.length > 15){
+
+       }else if (city.length > 45){ //Check if input value is longer than 45 characters 
         e.preventDefault();
         searchCity.innerHTML = "<p style= 'color:red'>Please, insert only city name !!!</p>";
         searchCity.setAttribute("style", "background: none) ;");
@@ -118,7 +128,7 @@ window.addEventListener('load', ()=> {
         .then(res => res.json())
         .then(data =>{
             let weatherDescr = data.weather[0].main;
-                console.log(data.weather[0].main);
+                console.log(data);
                 if(weatherDescr === 'Clouds'){
                     searchCity.setAttribute("style", "background: url('img/sky-sunny.jpg');background-size: cover");                                                  /*   style.background = "url('img/sky-sunny.jpg')"; */
                 }else if(weatherDescr === 'Clear'){
@@ -127,19 +137,53 @@ window.addEventListener('load', ()=> {
                     searchCity.setAttribute("style", "background: url('img/raining-in-the-city-2448749.jpg');");  
                 }
             let iconcode = data.weather[0].icon;
-            result.innerHTML =  '<strong>' + city + ' ' + Math.round(data.main.temp) + " C<sup>o</sup><strong>"
+            result.innerHTML =  '<strong>' + city.charAt(0).toUpperCase() + city.slice(1) + ' ' + Math.round(data.main.temp) + " C<sup>o</sup><strong>"
+            document.querySelector('#humidity').innerHTML = ` Humidity: ${data.main.humidity} %`
+            document.querySelector('#description').innerHTML = `Condition: ${data.weather[0].description}`.charAt(0).toUpperCase() +data.weather[0].description.slice(1);
             searchIcon.setAttribute('src',"http://openweathermap.org/img/w/" + iconcode + ".png")
+            addCity(city);
+            checkCity();
+            
+            //Reset the input value
             form.reset();
-           
+           //Call Api News with delay of 2 seconds
             setTimeout(getNews, 2000);
+            /* console.log(cityStorage); */
         
            
         })
     }
 })
 
+getFiveWeather.addEventListener('click', () => {
+    console.log('Clicked');
+})
 
+let checkCity = () => {
+    if(cityStorage.length < 1){
+        console.log("False");
+
+    }else{
+        console.log('True');
+    }
+}
+let addCity = (city) => {
+    cityStorage.push(city);
+    localStorage.setItem('city', JSON.stringify(cityStorage));
+    console.log(localStorage.getItem('city'));
+}
+let showCity = () => {
+    let cities = JSON.parse(localStorage.getItem('city'));
+    cities.forEach( city => {
+        let p = document.createElement('p');
+        p.innerText = city;
+        console.log(city);
+        /* document.querySelector('.history-container').appendChild('p'); */
+
+    }) 
+   
+}
+history.addEventListener('click', showCity());
 
 
 })
-
