@@ -40,7 +40,7 @@ window.addEventListener('load', ()=> {
         arrow.classList.toggle('active-arrow');
      })
     hasContent = () => {
-        let li = document.querySelector('#li');
+        let li = document.querySelector('.li');
         let hasContent = articles.contains(li);
         
         if(hasContent){
@@ -55,18 +55,23 @@ window.addEventListener('load', ()=> {
         fetch(`https://newsapi.org/v2/top-headlines?category=general&pageSize=5&country=pt&apiKey=${apiNewsKey}`)
         .then(res => res.json())
         .then(article =>{
+            console.log(article.articles[1]);
             let title = article.articles[1].title
             //Loping through all articles titles
             for(let i = 0; i < article.articles.length; i++){
-                
+                console.log(article.articles[i].url);
+                let img = document.createElement('img');
                 let li = document.createElement('li');
-                li.setAttribute('id', 'li');
+                li.setAttribute('class', 'li');
+                img.setAttribute('src',`${article.articles[i].urlToImage}`)
                 let link = document.createElement('a');
                 link.setAttribute('target', '_blank')
                 link.setAttribute('href', `${article.articles[i].url}`);
                 link.innerText = `${article.articles[i].title.slice(0,40)+'...'}`
                 li.appendChild(link);
+                link.appendChild(img);
                 articles.appendChild(li);
+                /* articles.appendChild(img); */
             }
             hasContent();
         

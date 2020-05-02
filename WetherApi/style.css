@@ -13,13 +13,17 @@ body{
 h1{
     margin: 0;
 }
+#articles img{
+  max-width: 195px;
+  max-height: 130px;
+}
 article{
-  width: 40%;
-  height: 60%;
+  width: 60%;
+  height: 120%;
   position: absolute;
   top: 3%;
-  left: -40%;
-  background: rgba(0, 0, 0, 0.3);
+  left: -60%;
+  background: rgba(0, 0, 0, 0.7);
   transition: .5s ease;
   -webkit-transition: .5s ease;
   -moz-transition: .5s ease;
@@ -45,6 +49,7 @@ article ul{
 }
 article ul li {
   padding: 20px 0;
+  margin: 10px 0;
   width: 80%;
 }
 article ul a{
@@ -52,7 +57,7 @@ article ul a{
   display: inline-block;
   width: 70%;
   height: 100%;
-  color: #000;
+  color: #fff;
   font-size: 19px;
   font-weight: 500;
 }
