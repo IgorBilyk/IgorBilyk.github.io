@@ -142,7 +142,7 @@ window.addEventListener('load', ()=> {
             document.querySelector('#description').innerHTML = `Condition: ${data.weather[0].description}`.charAt(0).toUpperCase() +data.weather[0].description.slice(1);
             searchIcon.setAttribute('src',"http://openweathermap.org/img/w/" + iconcode + ".png")
             addCity(city);
-            checkCity();
+            /* checkCity(); */
             
             //Reset the input value
             form.reset();
@@ -156,34 +156,64 @@ window.addEventListener('load', ()=> {
 })
 
 getFiveWeather.addEventListener('click', () => {
-    console.log('Clicked');
+    city = document.querySelector('#input').value;
+    console.log(city
+        );
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=1192ae3d1ebdb8edcae3bdfb00ac72b6`)
+    .then(res => res.json())
+    .then(data => {
+        console.log(data);
+})
+   
+    .catch( error => {
+        console.log(error)
+    })
 })
 
-let checkCity = () => {
+/* let checkCity = () => {
     if(cityStorage.length < 1){
         console.log("False");
 
     }else{
         console.log('True');
     }
-}
+} */
 let addCity = (city) => {
     cityStorage.push(city);
     localStorage.setItem('city', JSON.stringify(cityStorage));
     console.log(localStorage.getItem('city'));
 }
-let showCity = () => {
+/* let showCity = () => {
     let cities = JSON.parse(localStorage.getItem('city'));
     cities.forEach( city => {
         let p = document.createElement('p');
         p.innerText = city;
         console.log(city);
-        /* document.querySelector('.history-container').appendChild('p'); */
+        document.querySelector('.history-container').appendChild('p');
 
     }) 
    
-}
-history.addEventListener('click', showCity());
+} */
+/* history.addEventListener('click', () =>{
+    let citiesLength = JSON.parse(localStorage.getItem('city')).length;
+    let cities = JSON.parse(localStorage.getItem('city'));
+    let out = document.querySelector('#output');
+   
+        if(out.textContent == city){
+            cities.forEach( city => {
+            console.log('true')
+            })
+        }else{
+            console.log('false')
+            out.innerHTML += city + '<br>';
+        }
+        
+     
+        
+
+
+
+}) */
 
 
 })

@@ -13,12 +13,12 @@
 </head>
 <body>
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <ul class="nav-list">
-                <li class="list-item"><a href="#">Home</a></li>
-                <li class="list-item"><a href="#">Portfolio</a></li>
-                <li class="list-item"><a href="#">About us</a></li>
-                <li class="list-item"><a href="#">Contacts</a></li>
+                <li class="list-item"><a href="#navbar">Home</a></li>
+                <li class="list-item"><a href="#portfolio">Portfolio</a></li>
+                <li class="list-item"><a href="#about">About us</a></li>
+                <li class="list-item"><a href="#contacts">Contacts</a></li>
             </ul>
             <a href="#" class="hamburger">
                 <span></span>
@@ -79,7 +79,7 @@
             </div>
         </section>
         <section>
-            <div class="feature-section">
+            <div class="feature-section" id="portfolio">
                 <div class="feature-item">
                     <h3>Feature products</h3>
                     <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit,sed do eiusmod tempor incididunt ut labore et.</p>
@@ -107,7 +107,7 @@
             </div>
     </main> 
         </section>
-        <section class="team-section">
+        <section class="team-section" id="about">
             <div class="team-header">
                 <div class="team-item">
                         <h3>Meet our team</h3>
@@ -143,17 +143,17 @@
             </div>
         </section>
         <section>
-            <div class="getin-touch">
+            <div class="getin-touch" id="contacts">
                 <h3>Get in touch</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.ur adipis cing elit, sed do eiusmod tempor incididunt ut labore et. ur adipis cing elit, sed do eiusmod tempor incididunt ut labore et.</p>
             </div>
             <div class="form-section">
                 <div class="left-form">
                     <div class="inputs">
-                        <input type="text" placeholder="Name">
-                        <input type="email" placeholder="Your Mail">
+                        <input type="text" placeholder="Name" maxlength="15" required>
+                        <input type="email" placeholder="Your Mail" maxlength="25" required>
                     </div>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Type your message"></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder="Type your message" maxlength="500"></textarea>
                     <button>Send Message</button>
                 </div>
                 <div class="right-form">
@@ -190,7 +190,7 @@
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" defer crossorigin="anonymous"></script>     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.3.1/mixitup.min.js" integrity="sha256-FnUP2HEr+LnsA4l1YflN3prVZISLwKs2FB7X9/fdPBE=" crossorigin="anonymous"></script>
-    <script src="script/script.js"></script>
+    <script src="script/script.js" defer></script>
     <script>
         var mixer = mixitup('.container');
         var mixer = mixitup(containerEl);
