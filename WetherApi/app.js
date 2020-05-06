@@ -156,10 +156,10 @@ window.addEventListener('load', ()=> {
 })
 
 getFiveWeather.addEventListener('click', () => {
-    city = document.querySelector('#input').value;
+    /* city = document.querySelector('#input').value;
     console.log(city
-        );
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=${city}&units=metric&appid=1192ae3d1ebdb8edcae3bdfb00ac72b6`)
+        ); */
+    fetch(`https://pro.openweathermap.org/data/2.5/climate/month?q=London&appid=${apiKey}`)
     .then(res => res.json())
     .then(data => {
         console.log(data);
