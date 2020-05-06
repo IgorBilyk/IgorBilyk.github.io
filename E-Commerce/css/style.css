@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Bebas Neue', cursive;
+}
+
+.top-nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-family: 'Lobster', cursive;
+  color: #3cc3b5;
+  font-size: 3rem;
+  margin: 0;
+}
+
+form input {
+  width: 440px;
+  height: 40px;
+  margin: 25px 0 0 0;
+  border: 2px solid #e1e1e1;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+form input ::-webkit-input-placeholder {
+  color: #e1e1e1;
+}
+
+form input :-ms-input-placeholder {
+  color: #e1e1e1;
+}
+
+form input ::-ms-input-placeholder {
+  color: #e1e1e1;
+}
+
+form input ::placeholder {
+  color: #e1e1e1;
+}
+
+.cart {
+  width: 110px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.cart i {
+  height: 25px;
+  width: 25px;
+  font-size: 35px;
+  color: #3cc3b5;
+}
+
+.nav-down ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  list-style: none;
+  background: #4ccfc1;
+  height: 10vh;
+}
+
+.nav-down ul li {
+  display: inline-block;
+  padding: 5px 25px;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 20px;
+  border-right: 2px solid #fff;
+}
+
+.slider-section {
+  height: 60vh;
+  background: #3cc3b5;
+}
+
+.mySlides {
+  width: 100%;
+  height: 60vh;
+  background: lightcoral;
+}
+/*# sourceMappingURL=style.css.map */
