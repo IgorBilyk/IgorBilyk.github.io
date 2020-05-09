@@ -207,10 +207,10 @@
 
 .gear {
   position: absolute;
-  top: 41%;
-  left: 56%;
-  width: 355px;
-  height: 220px;
+  top: 48%;
+  left: 21%;
+  width: 50%;
+  height: 50%;
   -webkit-animation-name: animate-gear;
           animation-name: animate-gear;
   -webkit-animation-duration: 52s;

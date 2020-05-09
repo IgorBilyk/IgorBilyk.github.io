@@ -219,6 +219,15 @@ form input ::placeholder {
   cursor: pointer;
 }
 
+.image-cell {
+  max-height: 120px;
+}
+
+.image-cell img {
+  width: auto;
+  height: auto;
+}
+
 .text-cell h4 {
   text-transform: uppercase;
   color: #afafaf;

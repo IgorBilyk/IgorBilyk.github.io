@@ -166,6 +166,13 @@ form input{
         cursor: pointer;
     }
 }
+.image-cell{
+    max-height: 120px;
+    img{
+        width: auto;
+        height: auto;
+    }
+}
 .text-cell h4{
     @include text;
 
@@ -220,11 +227,15 @@ body {
 .image-block{
     text-align: center;
 }
+
+
 .mySlides{
     width: 80%;
     display: flex;
-
+  
 }
+
+
 img {vertical-align: middle;}
 
 /* Slideshow container */
