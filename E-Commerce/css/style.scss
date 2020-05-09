@@ -73,7 +73,7 @@ form input{
     }
 }
 .slider-section{
-    height: 60vh;
+    height: 70vh;
     background: $logoColor;
 }
 .down-slider{
@@ -90,7 +90,9 @@ form input{
         width: auto;
         height: auto;
     }
-    
+}
+.image-block img{
+    margin: 1% 0 0 0;
 }
 .product-descr{
     margin: 0 0 0 10px;
@@ -275,12 +277,7 @@ img {vertical-align: middle;}
 /* Caption text */
 .text {
   color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-/*position: absolute;
-  top: 10px; */
-  width: 50%;
-  text-align: left;
+  text-align: center;
 }
 
 /* Number text (1/3 etc) */
@@ -292,9 +289,8 @@ img {vertical-align: middle;}
   top: 0;
 }
 .dots{
-    background: $logoColor;
     position: absolute;
-    bottom: 10px;
+    bottom: -35px;
 }
 /* The dots/bullets/indicators */
 .dot {
@@ -302,14 +298,14 @@ img {vertical-align: middle;}
   height: 15px;
   width: 15px;
   margin: 0 2px;
-  background-color: #bbb;
+  background-color: #09766b;
   border-radius: 50%;
   display: inline-block;
   transition: background-color 0.6s ease;
 }
 
 .active, .dot:hover {
-  background-color: #717171;
+  background-color: #98e3db;
 }
 
 /* Fading animation */

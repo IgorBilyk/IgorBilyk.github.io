@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
     <link rel="shortcut icon" type="image/png" href="img/favicon_io/favicon.ico"/>
+    <link rel="stylesheet" href="../assets/library/OwlCarousel2-2.3.4/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../assets/library/OwlCarousel2-2.3.4/dist/assets/owl.theme.default.min.css">  
 </head>
 <body>
     <header>
@@ -44,7 +46,7 @@
 
                 <div class="mySlides fade">
                   <div class="image-block">
-                    <img src="img/T-shirt.png" style="width:20%">
+                    <img src="img/T-shirt.png" style="width:21%">
                   </div>
                   <div class="text">
                     <h3>Cowhide</h3>
@@ -55,7 +57,7 @@
                 </div>
                 <div class="mySlides fade">
                   <div class="image-block">
-                    <img src="img/T-shirt.png" style="width:20%">
+                    <img src="img/T-shirt.png" style="width:21%">
                   </div>
                   <div class="text">
                     <h3>Fashin Bags</h3>
@@ -66,7 +68,7 @@
                 </div>
                 <div class="mySlides fade">
                   <div class="image-block">
-                    <img src="img/T-shirt.png" style="width:20%">
+                    <img src="img/T-shirt.png" style="width:21%">
                   </div>
                   <div class="text">
                     <h3>New T-Shirts</h3>
@@ -240,7 +242,6 @@
           <p>Copyright &copy; 2020 Css Author</p>
         </div>
     </main>
-    //finish the slider 
     //try something on weather project
 
 
@@ -272,6 +273,14 @@
           slides[slideIndex-1].style.display = "block";  
           dots[slideIndex-1].className += " active";
         }
+
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous" defer></script>
+        <script src="../assets/library/OwlCarousel2-2.3.4/dist/owl.carousel.min.js" defer></script>
+        <script>
+        jQuery(document).ready(function(){
+          jQuery(".owl-carousel").owlCarousel();
+});
         </script>
 </body>
 </html>
