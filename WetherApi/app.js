@@ -10,6 +10,9 @@ window.addEventListener('load', ()=> {
     let apiKey = '1192ae3d1ebdb8edcae3bdfb00ac72b6';    
     let apiNewsKey = `46154422b4d645079df3846f1188a586`;
     let searchCity = document.querySelector('.search-city');
+    let d = new Date();
+    let day = d.getUTCDate();
+    console.log(day)
     
     //Variables for 5 days weather
     let getFiveWeather = document.querySelector('#getFiveWeather');
@@ -159,12 +162,23 @@ getFiveWeather.addEventListener('click', () => {
     /* city = document.querySelector('#input').value;
     console.log(city
         ); */
-    fetch(`https://pro.openweathermap.org/data/2.5/climate/month?q=London&appid=${apiKey}`)
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=Lisbon&appid=${apiKey}`)
     .then(res => res.json())
     .then(data => {
-        console.log(data);
+        /* let day = data.list[0].dt_txt.slice(8,10); */
+        let arr= [];
+        for(let i = 0; i < data.list.length; i++){
+            if(data.list[i].dt_txt.slice(8,10) !== day) {
+                
+                arr.push(data.list[i].dt_txt.slice(8,10));
+                /* console.log(arr); */
+            }else{
+                console.log(data.list[i])
+            }
+        }
+        console.log(`arr length: ${arr.length} ${arr}`);
 })
-   
+    
     .catch( error => {
         console.log(error)
     })
