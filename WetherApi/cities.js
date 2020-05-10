@@ -569,13 +569,43 @@ getCurrentCity = () => {
     
     })
     
-    // Insert data to HTML 
     
     
     
     insertCityWeather = (temp, date, img) =>{
         let wrapperWeather = document.querySelector('.wrapper-weather');
         let paragraph = document.createElement('p');
+        let out = '';
+        out += temp;
+        out += date;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         let paragraph2 = document.createElement('p');
         let image = document.createElement('img');
         let div = document.createElement('div');
@@ -590,32 +620,5 @@ getCurrentCity = () => {
         div.appendChild(image);
     
     }   
-    /* insertCityWeather(); */
-
-    
- /*       .catch(error =>{
-            console.log("error");
-        }) 
-        //Fetch to News API
-
-    fetch(`https://newsapi.org/v2/top-headlines?category=general&pageSize=5&country=pt&apiKey=${apiNewsKey}`)
-        .then(res => res.json())
-        .then(article =>{
-            console.log(article.articles);
-            article.innerHTML = ` Hello `;
-        
-            
-           console.log( article.articles[0].title,+ '///'+ article.articles[1].title,+ '///'+ article.articles[2].title)
-          
-        })
-        .catch(error =>{
-            console.log("error");
-        }) 
-        //Fetch to News API
 
 
-
-       }
-    })
-         */
-      

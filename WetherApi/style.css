@@ -8,11 +8,11 @@ body{
     box-sizing: border-box;
     font-family: 'Roboto Mono', monospace;
     color: #333;
-
 }
 h1{
     margin: 0;
 }
+
 #articles img{
   max-width: 195px;
   max-height: 130px;

@@ -12,7 +12,7 @@ window.addEventListener('load', ()=> {
     let searchCity = document.querySelector('.search-city');
     let d = new Date();
     let day = d.getUTCDate();
-    console.log(day)
+
     
     //Variables for 5 days weather
     let getFiveWeather = document.querySelector('#getFiveWeather');
@@ -20,6 +20,7 @@ window.addEventListener('load', ()=> {
     let iconForDay =document.querySelector('#weather-day');
     let dayTeampreture = document.querySelector('#day-temperature');
     let weatherCityName = document.querySelector('#weather-city');
+    let wrapperWeather = document.querySelector('.wrapper-weather');
     let dayDate = document.querySelector('#day-date-day');
     let dayHour = document.querySelector('#day-date-hour');
     let city;
@@ -83,10 +84,7 @@ window.addEventListener('load', ()=> {
             }
             //Call function to verify if articles section has content
             hasContent();
-        
-            
-          /*  console.log( article.articles[0].title,+ '///'+ article.articles[1].title,+ '///'+ article.articles[2].title)
-           console.log(articles.contains(li)); */
+    
         })
         //Handle an error
         .catch(error =>{
@@ -162,28 +160,63 @@ getFiveWeather.addEventListener('click', () => {
     /* city = document.querySelector('#input').value;
     console.log(city
         ); */
-    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=Lisbon&appid=${apiKey}`)
+    fetch(`http://api.openweathermap.org/data/2.5/forecast?q=Lisbon&units=metric&appid=${apiKey}`)
     .then(res => res.json())
     .then(data => {
         /* let day = data.list[0].dt_txt.slice(8,10); */
-        let arr= [];
+       /*  let arr= [];
         for(let i = 0; i < data.list.length; i++){
-            if(data.list[i].dt_txt.slice(8,10) !== day) {
-                
+            if(data.list[i].dt_txt.slice(8,10) !== day){
                 arr.push(data.list[i].dt_txt.slice(8,10));
-                /* console.log(arr); */
+                console.log(arr);
+               
             }else{
-                console.log(data.list[i])
+                console.log(data.list[i]);
             }
-        }
-        console.log(`arr length: ${arr.length} ${arr}`);
-})
-    
+        } */
+        /* console.log(`arr length: ${arr.length} ${arr}`); */
+        
+            getFiveDays(data);
+
+         
+
+       /*  dayDate.innerHTML= arr[1]; */
+})  
     .catch( error => {
         console.log(error)
     })
 })
-
+const getFiveDays = (temp) => {
+    let arr= [];
+        for(let i = 0; i < temp.list.length; i++){
+            if(parseInt(temp.list[i].dt_txt.slice(8,10)) !== day){
+                arr.push(temp.list[i]);
+                /* console.log(arr[i].main) */
+                /* console.log(arr[i].dt_txt.slice(8,10), ' -- -' + arr[i].main ,'Min temp' +  arr[i].main.temp_min,'Max temp' +  arr[i].main.temp_max, 'Temp'+ arr[i].main.temp ); */
+               
+            }else{
+                /* console.log(temp.list[i]); */
+            }
+           
+        }
+        let weatherDiv = document.createElement("div");
+        weatherDiv.setAttribute("class", "weather-day");
+        for(let i = 0; i < arr.length; i += 4){
+            let weatherDiv = document.createElement("div");
+            weatherDiv.setAttribute("class", "weather-day");
+            console.log(i+1,  '----', 'Day: ',arr[i].dt_txt, 'Temp:', arr[i].main.temp, 'Min temp:',arr[i].main.temp_min, 'Max Temp', arr[i].main.temp_max   )
+                
+        }
+      
+ 
+    /* console.log(temp.list); */
+  /*   for(let i = 0; i < arr.length; i++){
+        console.log(arr[i]);
+    } */
+    
+    wrapperWeather.appendChild(weatherDiv);
+    
+}
 /* let checkCity = () => {
     if(cityStorage.length < 1){
         console.log("False");
@@ -204,9 +237,7 @@ let addCity = (city) => {
         p.innerText = city;
         console.log(city);
         document.querySelector('.history-container').appendChild('p');
-
     }) 
-   
 } */
 /* history.addEventListener('click', () =>{
     let citiesLength = JSON.parse(localStorage.getItem('city')).length;
@@ -221,13 +252,6 @@ let addCity = (city) => {
             console.log('false')
             out.innerHTML += city + '<br>';
         }
-        
-     
-        
-
-
 
 }) */
-
-
 })
